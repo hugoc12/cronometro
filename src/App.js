@@ -1,25 +1,44 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+//#112B3C
+//#F66B0E
+//#205375
+//#EFEFEF
+
+const frases = [
+  'A vida trará coisas boas se tiver paciência',
+  'Demonstre amor e alegria em todas as oportunidades e verá que a paz nasce dentro de si',
+  'Não compense na ira o que lhe falta na razão',
+  'Defeitos e virtudes são apenas dois lados da mesma moeda',
+  'A maior de todas as torres começa no solo',
+  'Não há que ser forte. Há que ser flexível',
+  'O verdadeiro homem mede a sua força, quando se defronta com o obstáculo',
+  'Há três coisas que jamais voltam; a flecha lançada, a palavra dita e a oportunidade perdida',
+  'A juventude não é uma época da vida, é um estado de espírito',
+  'Podemos escolher o que semear, mas somos obrigados a colher o que plantamos.'
+]
+
+
+
+
+function App(){
+  const [frase, setFrase] = useState('...');
+
+  function sortFrase(){
+    let fraseSort = frases[Math.floor(Math.random()*frases.length)];
+    setFrase(fraseSort)
+  }
+
+  return(
+    <div className='container'>
+      <h1 className='sorte'>{frase}</h1>
+      <div className='containerBtt'>
+        <button className='btt btt-1' onClick={()=>sortFrase()}>OPEN</button>
+        <button className='btt btt-2' onClick={()=>setFrase('...')}>RESET</button>
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
