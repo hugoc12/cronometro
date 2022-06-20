@@ -19,25 +19,16 @@ time, mark, audio, video{
   color: #fff;
 }
 
+body{
+  background-color: #112B3C;
+}
+
 .container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #112B3C;
-
-  height: 100vh;
-}
-
-.txtInput{
-  width: 70%;
-  padding: 10px;
-  color: #112B3C;
-  border:none;
-  outline: none;
-  border-radius: 5px;
-  font-size: 18px;
-  margin-top: 10px;
+  margin-top: 100px;
 }
 
 .containerBtt{
@@ -46,6 +37,7 @@ time, mark, audio, video{
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top: 15px;
 }
 
 .btt{
@@ -60,10 +52,6 @@ time, mark, audio, video{
 
 .btt:active{
   outline: solid 1px #fff;
-}
-
-.containerBtt{
-  margin-top: 15px;
 }
 
 .btt-1{
@@ -82,7 +70,24 @@ time, mark, audio, video{
   background-color: #22628d;
 }
 
-h1.sorte{
-  text-align: center;
-  padding: 15px;
+.btt-3{
+  background-color: rgb(233, 79, 79);
+}
+
+.cronometro{
+  font-size: 56px;
+  margin-bottom: 10px;
+}
+
+.cronometro span{
+  font-size: 40px;
+}
+
+.ranking{
+  margin-top: 10px;
+}
+
+.ranking li{
+  font-size: 22px;
+  margin:5px 0px;
 }
